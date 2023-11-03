@@ -45,7 +45,7 @@ public class WriteToFile {
 			tableDataList.add(td.text());
 		}
 
-		try (FileWriter fileWriter = new FileWriter("F:\\mkdistributors\\Output\\" + subCategory + ".csv", true);
+		try (FileWriter fileWriter = new FileWriter("F:\\mkdistributors\\row_wise\\" + subCategory + ".csv", true);
 				CSVPrinter csvPrinter = new CSVPrinter(fileWriter, CSVFormat.DEFAULT)) {
 			if (!previousCategory.equals(subCategory)) {
 				// headings
@@ -113,7 +113,7 @@ public class WriteToFile {
 		}
 
 		// Create a CSV file and write the extracted data
-		String csvFilePath = "F:\\mkdistributors\\Output\\" + subCategory + ".csv";
+		String csvFilePath = "F:\\mkdistributors\\row_wise\\" + subCategory + ".csv";
 		try (FileWriter fileWriter = new FileWriter(csvFilePath, true);
 				CSVPrinter csvPrinter = new CSVPrinter(fileWriter, CSVFormat.DEFAULT)) {
 

@@ -38,7 +38,7 @@ public class Scrap {
 					String href = link.attr("href");
 					headings = writeToFile.specifyHeadings(domain + href, subCategory);
 				}
-				try (FileWriter fileWriter = new FileWriter("F:\\mkdistributors\\Output\\" + subCategory + ".csv",
+				try (FileWriter fileWriter = new FileWriter("F:\\mkdistributors\\row_wise\\" + subCategory + ".csv",
 						true); CSVPrinter csvPrinter = new CSVPrinter(fileWriter, CSVFormat.DEFAULT)) {
 
 					for (Map.Entry<String, String> heading : headings.entrySet()) {
